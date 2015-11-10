@@ -30,9 +30,9 @@ public class ClockDisplay
     public void setTime(int hora, int minuto)
    {
     
-        if (hora >= 10 & hora <= 23) 
+        if (horas >= 0 & horas <= 23) 
         {
-            if (minuto >= 10 & minuto <=59)
+            if (minutos >= 0 & minutos <=59)
             {
                 horas = hora;
                 minutos = minuto;
@@ -41,5 +41,30 @@ public class ClockDisplay
           
             }
         }
-   }   
+    }
+   
+   /**
+    * Método timeTick que permite hacer avanzar un minuto el tiempo fijado.
+    */
+   public void timeTick()
+   {
+       minutos = minutos + 1;
+       if (minutos > 59)
+       {
+           minutos = 0;
+           horas = horas + 1;
+       }
+       horas = horas;
+       if (horas > 23)
+       {
+           minutos = 0;
+           horas = 0;
+       }
+       
+       {
+           System.out.println("A pasado un minuto, la hora actual es " + horas + ":" + minutos);
+           
+       }
+    }
 }
+
