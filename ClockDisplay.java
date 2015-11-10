@@ -23,28 +23,27 @@ public class ClockDisplay
          minutos = 0;
      }
     /**
-     * Método setTime que permita fijar un momento determinado de tiempo expresado en horas y minutos.
+     * Método setTime, que permita fijar un momento determinado de tiempo expresado en horas y minutos.
      */
        
        
     public void setTime(int hora, int minuto)
    {
-    
-        if (horas >= 0 & horas <= 23) 
+        if (hora <= 23 & minuto <= 59)
         {
-            if (minutos >= 0 & minutos <=59)
-            {
-                horas = hora;
-                minutos = minuto;
-                System.out.println("La hora actual es " + hora + ":" + minuto);
-                
-          
-            }
+              horas = hora;
+              minutos = minuto;
+              System.out.println("La hora actual es " + hora + ":" + minuto);
+        }
+        
+        else if (hora >= 24 & minuto >= 60)
+        {
+                System.out.println("La hora es errónea");
         }
     }
-   
+    
    /**
-    * Método timeTick que permite hacer avanzar un minuto el tiempo fijado.
+    * Método timeTick, que permite hacer avanzar un minuto el tiempo fijado.
     */
    public void timeTick()
    {
@@ -65,6 +64,14 @@ public class ClockDisplay
            System.out.println("A pasado un minuto, la hora actual es " + horas + ":" + minutos);
            
        }
+    }
+    
+    /**
+     * Método getTime, devuelve una cadena de 5 caracteres consistente en la hora y los minutos separados por dos puntos.
+     */
+    public void getTime()
+    {
+      
     }
 }
 
