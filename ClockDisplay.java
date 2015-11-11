@@ -69,9 +69,12 @@ public class ClockDisplay
     /**
      * Método getTime, devuelve una cadena de 5 caracteres consistente en la hora y los minutos separados por dos puntos.
      */
-    public void getTime()
+    public String getTime()
     {
-      
+       String mostrar = String.format("%02d:%02d", horas, minutos);
+       return "La hora actual es " + mostrar;  
+        
     }
 }
+
 

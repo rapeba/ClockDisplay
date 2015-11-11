@@ -9,6 +9,6 @@ comment2.params=
 comment2.target=void\ timeTick()
 comment2.text=\r\n\ M\u00E9todo\ timeTick,\ que\ permite\ hacer\ avanzar\ un\ minuto\ el\ tiempo\ fijado.\r\n
 comment3.params=
-comment3.target=void\ getTime()
+comment3.target=java.lang.String\ getTime()
 comment3.text=\r\n\ M\u00E9todo\ getTime,\ devuelve\ una\ cadena\ de\ 5\ caracteres\ consistente\ en\ la\ hora\ y\ los\ minutos\ separados\ por\ dos\ puntos.\r\n
 numComments=4
